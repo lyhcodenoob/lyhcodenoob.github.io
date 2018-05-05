@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lyhの万事屋</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://lyhcodenoob.github.io/"/>
+  <updated>2018-05-05T07:28:41.314Z</updated>
+  <id>https://lyhcodenoob.github.io/</id>
+  
+  <author>
+    <name>矛盾的Lyh</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo+github搭建博客</title>
+    <link href="https://lyhcodenoob.github.io/2018/04/29/hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93/"/>
+    <id>https://lyhcodenoob.github.io/2018/04/29/hexo+github搭建个人博客总结/</id>
+    <published>2018-04-28T17:51:05.236Z</published>
+    <updated>2018-05-05T07:28:41.314Z</updated>
+    
+    <content type="html"><![CDATA[<p>总算搭建好了自己的个人博客，网上的教程很多也很详细，不过也有很多坑需要注意</p><h2 id="雷区"><a href="#雷区" class="headerlink" title="雷区"></a>雷区</h2><h3 id="第一个坑"><a href="#第一个坑" class="headerlink" title="第一个坑"></a>第一个坑</h3><p>一定要下载较新的版本，刚开始一直不成功的原因就是git和nodejs版本太老！</p><h3 id="第二个坑"><a href="#第二个坑" class="headerlink" title="第二个坑"></a>第二个坑</h3><p>一定要创建一个空文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;新的空文件夹&gt;</span><br></pre></td></tr></table></figure></p><h3 id="第三个坑"><a href="#第三个坑" class="headerlink" title="第三个坑"></a>第三个坑</h3><p>配置SSH密钥，命令比较复杂，需要注意不要输错了<br>第一步 查看是否存在密钥<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh</span><br></pre></td></tr></table></figure></p><p>第二步 创建一对新的SSH密钥(keys)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ssh-keygen -t rsa -C &quot;your_email&quot;</span><br></pre></td></tr></table></figure></p><p>第三步 在GitHub账户中添加你的公钥<br>运行如下命令，将公钥的内容复制到系统粘贴板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></p><p>第四步 测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p><p>第五步 执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></p><p>可能需要安装插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p><h3 id="成功"><a href="#成功" class="headerlink" title="成功"></a>成功</h3><p>在浏览器上输入自己的主页地址,https://[您的用户名].github.io/）即可看到自己的博客了<br><a href="https://lyhcodenoob.github.io/">Lyh’的万事屋</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;总算搭建好了自己的个人博客，网上的教程很多也很详细，不过也有很多坑需要注意&lt;/p&gt;
+&lt;h2 id=&quot;雷区&quot;&gt;&lt;a href=&quot;#雷区&quot; class=&quot;headerlink&quot; title=&quot;雷区&quot;&gt;&lt;/a&gt;雷区&lt;/h2&gt;&lt;h3 id=&quot;第一个坑&quot;&gt;&lt;a href=&quot;#第一个坑
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="https://lyhcodenoob.github.io/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://lyhcodenoob.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://lyhcodenoob.github.io/2018/04/28/hello-world/"/>
+    <id>https://lyhcodenoob.github.io/2018/04/28/hello-world/</id>
+    <published>2018-04-28T14:31:27.153Z</published>
+    <updated>2018-05-05T07:29:03.322Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
